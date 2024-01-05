@@ -235,8 +235,16 @@ function getIndexOf(str, letter) {
  *  12345, 0    => false
  *  12345, 6    => false
  */
-function isContainNumber(/* num, digit */) {
-  throw new Error('Not implemented');
+function isContainNumber(num, digit) {
+  if (num <= 0) {
+    return false;
+  }
+  const remainder = num % 10;
+  const result = Math.round(num / 10);
+  if (remainder === digit) {
+    return true;
+  }
+  return isContainNumber(result, digit);
 }
 
 /**
