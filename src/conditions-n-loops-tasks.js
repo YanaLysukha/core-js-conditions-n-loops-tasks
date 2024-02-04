@@ -342,9 +342,7 @@ function getSpiralMatrix(size) {
     }
     j -= 1;
     i += 1;
-    if (matrix[i][j] !== 0) {
-      return matrix;
-    }
+
     while (i < matrix.length && matrix[i][j] === 0) {
       matrix[i][j] = counter;
       i += 1;
@@ -352,9 +350,7 @@ function getSpiralMatrix(size) {
     }
     i -= 1;
     j -= 1;
-    if (matrix[i][j] !== 0) {
-      return matrix;
-    }
+
     while (j >= 0 && matrix[i][j] === 0) {
       matrix[i][j] = counter;
       j -= 1;
@@ -362,9 +358,7 @@ function getSpiralMatrix(size) {
     }
     i -= 1;
     j += 1;
-    if (matrix[i][j] !== 0) {
-      return matrix;
-    }
+
     while (matrix[i][j] === 0) {
       matrix[i][j] = counter;
       i -= 1;
@@ -372,9 +366,6 @@ function getSpiralMatrix(size) {
     }
     i += 1;
     j += 1;
-    if (matrix[i][j] !== 0) {
-      return matrix;
-    }
   }
   return matrix;
 }
